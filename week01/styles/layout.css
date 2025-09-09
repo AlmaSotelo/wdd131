@@ -1,0 +1,76 @@
+/* layout.css */
+
+/* Page Grid: header | main | footer */
+body {
+  display: grid;
+  grid-template-rows: auto 2fr .5fr;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #545151;
+  color: white;
+}
+
+h2 {
+  padding-left: 1rem;
+}
+
+main {
+  display: grid;
+  grid-template: auto 1fr / 2fr 1fr ;
+ 
+
+  background-color: #9fb0b9;
+  grid-template-areas:
+    "nav nav"
+    "section aside";
+}
+
+nav {
+  display: flex; 
+  justify-content:center;
+  align-items: center;
+  width: 100%;
+  background-color: #444;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  flex: 1;
+  text-align: center;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  grid-area: section;
+  background-color: #9fb0b9;
+  padding: 1rem;
+}
+
+aside {
+  grid-area: aside;
+  background-color: white;
+  padding: 1rem;
+}
+
+footer {
+  background-color: #545151;
+  text-align: center;
+  color: white;  
+}
