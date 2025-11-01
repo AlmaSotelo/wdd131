@@ -7,83 +7,155 @@
    <meta name="author" content="Alma Sotelo">
    <meta name="description" content="Dynamic Web Fundamentals"
       content="This is the landing page">
+
    <title>WDD 131 - Dynamic Web Fundamentals - Alma Sotelo</title>
-   <link rel="stylesheet" href="styles/layout.css">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap"
+      rel="stylesheet">
+
+   <link rel="stylesheet" href="styles/base.css">
+
 </head>
 
 <body>
 
-   <header>
+   <div class="parent-body">
 
-      <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+      <header>
 
-      <nav>
-         <a href="https://www.linkedin.com/in/alma-sotelo/#">LinkedIn</a>
-         <a href="https://byupw.instructure.com/">Canvas</a>
-         <a
-            href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng&id=p32#p32">Scripture</a>
-         <a href="#">Final Project</a>
-      </nav>
+         <span id="course-title">WDD 131 – Dynamic Web Fundamentals | Alma
+            Sotelo </span>
 
-   </header>
+         <nav>
+            <ul>
+               <li><a
+                     href="https://www.linkedin.com/in/alma-sotelo/#">LinkedIn</a>
+               </li>
+               <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+               <li><a
+                     href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng&id=p32#p32">Scripture</a>
+               </li>
+               <li><a href="#">Final Project</a></li>
+            </ul>
+         </nav>
 
-   <main>
+      </header>
 
-      <h1>Alma Sotelo</h1>
+      <main class="page-main" id="main"> <!-- grid  2c, 1r -->
 
-      <section class="card">
-         <h3>About Me</h3>
-         <img src="images/picture-profile-fixed.jpg" alt="Alma" width="200">
-         <p>Hi! My name is Alma. I am currently a BYU-Pathway student, working
-            toward
-            becoming a Software Developer within the next two years. I really
-            love coding
-            and feel grateful for the opportunity to pursue this education.
-            When I’m not at the computer studying, I’m usually at my sewing
-            machine. I’m
-            pretty tall, so I make most of my own clothes, this is a skill I’ve
-            enjoyed
-            since I was a
-            teenager. I also love cleaning my home, cooking for my family (and
-            sharing
-            with
-            others), planting medicinal herbs, and playing with my two dogs.
-            I’m a mom, a sister, and a friend. English is my second language,
-            and
-            I’m fluent in Spanish. I earned a BA in Engineering from a foreign
-            university
-            and worked for many years as an HR and Safety Coordinator in a
-            construction
-            company. Later, I changed paths and completed a Web Developer
-            Certificate
-            through a bootcamp.
-            I would describe myself as a happy, lifelong learner.
-         </p>
-      </section>
+         <section class="card" id="card1"> <!-- grid  2c, 4r -->
 
-      <section class="card">
-         <h3>Sonora, Mexico</h3>
-         <img src="images/carne-asada-beef-Fixed.jpg" alt="carne asada">
-         <p>Sonora is Mexico's second-largest state, located in the northwest,
-            known for its mineral wealth (especially copper), agricultural
-            output,
-            and a significant livestock and ranching tradition, including famous
-            regional foods like carne asada. The state features diverse
-            geography, from the arid Sonoran Desert and coastline along the Gulf
-            of California to the Sierra Madre Occidental mountains in the east.
-            Its history is marked by indigenous communities, Jesuit missions,
-            and strong economic and
-            cultural ties to the United States, particularly Arizona.</p>
-      </section>
+            <div class="card-header" id="header-card1">
+               <h2>About Me</h2>
+            </div>
 
-   </main>
+            <div class="card1-img" id="img-person">
+               <img id="person" src="images/picture-profile-fixed.jpg"
+                  alt="Alma" width="200" height="229">
+            </div>
 
-   <footer>
-      <p>&copy;<span id="currentyear"></span>Alma Sotelo | Mexico</p>
+            <div id="card1-content1">
+               <p>Hi! My name is Alma. I am currently a BYU-Pathway student,
+                  working
+                  toward
+                  becoming a Software Developer within the next two years. I
+                  really
+                  love coding
+                  and feel grateful for the opportunity to pursue this
+                  education.
+                  When I’m not at the computer studying, I’m usually at my
+                  sewing
+                  machine. I’m
+                  pretty tall, so I make most of my own clothes, this is a skill
+                  I’ve
+                  enjoyed
+                  since I was a
+                  teenager. I also love cleaning my home, cooking for my family
+                  (and
+                  sharing
+                  with
+                  others), planting medicinal herbs, and playing with my two
+                  dogs.
+                  I’m a mom, a sister, and a friend. English is my second
+                  language,
+                  and
+                  I’m fluent in Spanish. I earned a BA in Engineering from a
+                  foreign
+                  university
+                  and worked for many years as an HR and Safety Coordinator in a
+                  construction
+                  company. Later, I changed paths and completed a Web Developer
+                  Certificate
+                  through a bootcamp.
+                  I would describe myself as a happy, lifelong learner.
+               </p>
+            </div>
 
-      <p><span id="lastModified"></span></p>
-   </footer>
+            <div id="card1-place"> <!-- grid  2c, 2r -->
+               <div id="card1-place-header">
+                  <h3>Sonora, Mexico</h3>
+                  <hr>
+               </div>
+               <div class="card1-img" id="img-place">
+                  <img id="place"
+                     src="images/carne-asada-beef-Fixed.jpg" alt="carne asada"
+                     width="200" height="230">
+               </div>
+
+               <div id="card1-content2">
+                  <p>Sonora is Mexico's second-largest state, located in the
+                     northwest,
+                     known for its mineral wealth (especially copper),
+                     agricultural
+                     output,
+                     and a significant livestock and ranching tradition,
+                     including famous
+                     regional foods like carne asada. The state features diverse
+                     geography, from the arid Sonoran Desert and coastline along
+                     the Gulf
+                     of California to the Sierra Madre Occidental mountains in
+                     the east.
+                     Its history is marked by indigenous communities, Jesuit
+                     missions,
+                     and strong economic and
+                     cultural ties to the United States, particularly Arizona.
+                  </p>
+               </div>
+
+            </div>
+         </section>
+
+         <section class="card" id="card2"> <!-- grid  1c, 2r -->
+            <div class="card-header">
+               <h2>Web Dev Resources</h2>
+            </div>
+            <ul>
+               <div class = "card-list">
+               <li><a href="#" target="_blank">Dev.to Community</a></li>
+               <li><a href="#" target="_blank">Smashing Magazine</a></li>
+               <li><a href="#" target="_blank">CSS Tricks</a></li>
+               <li><a href="#" target="_blank">W3 Schools</a></li>
+               <li><a href="#" target="_blank">Udemy</a></li>
+               <li><a href="#" target="_blank">Image Placeholder</a>
+               </div>   
+            </ul>
+         </section>
+
+      </main>
+
+      <footer>
+
+         <p>&copy;<span id="currentyear"></span>Alma Sotelo | Mexico</p>
+         <p><span id="lastModified"></span></p>
+      </footer>
+
+   </div>
 
 </body>
+
+<script src="scripts/getdates.js"></script>
 
 </html>
