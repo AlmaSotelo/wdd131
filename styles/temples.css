@@ -57,7 +57,7 @@ nav a {
     font-weight: var(--font);
     font-size: small;
     text-decoration: none;
-    padding: .75rem 1;
+    padding: .75rem 1rem;
 }
 
 main {
