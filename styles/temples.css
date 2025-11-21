@@ -130,27 +130,3 @@ footer {
     border-radius: 2px;
     transition: all 0.3s ease;
 }
-
-/* When active, transform hamburger into X */
-.menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-    /* hide middle line */
-}
-
-.menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-Mobile menu toggle 
-.mobile-menu {
-    display: none;
-}
-
-.mobile-menu.active {
-    display: flex;
-    flex-direction: column;
-}

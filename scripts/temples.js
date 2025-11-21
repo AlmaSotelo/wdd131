@@ -16,23 +16,23 @@
         lastEl.textContent = "Document last modified: " + (document.lastModified || "unknown");
     }
 })();
-document.addEventListener("DOMContentLoaded", () => {
+
 
 /* per instructions: "The navigation must employ a hover affect."
 */
 const menuBtn = document.querySelector('.menu-btn');
 const nav = document.querySelector('nav');
 
-menuBtn.addEventListener('click', () => {
-    nav.classList.toggle('open');
-});
+document.addEventListener("DOMContentLoaded", () => {
+    menuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
 
-    /* transform hamburger into X  - still working on this
-    const toggleButton = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".mobile-menu");
 
-    toggleButton.addEventListener("click", () => {
-        toggleButton.classList.toggle("active"); // toggles X
-        menu.classList.toggle("active");         // shows/hides menu
-    });*/
+        /* transform hamburger into X and back to hamburguer */
+        if (nav.classList.contains('open')) {
+            menuBtn.textContent = "✖";
+        } else {
+            menuBtn.textContent = "☰";
+        }
+    });   
 })
