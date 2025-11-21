@@ -1,0 +1,56 @@
+@media (min-width: 700px) {
+    .menu-btn {
+        display: none;
+    }
+
+    nav {
+        max-height: none !important;
+        display: flex !important;
+        /* per instructions "use CSS Flex on the navegation nav" */
+        flex-direction: row;
+        background: none;
+        padding: 0;
+        overflow: visible;
+    }
+
+    nav a {
+        padding: 0 1rem;
+    }
+}
+
+@media (min-width: 900px) {
+
+    main {
+        max-width: 1000px;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    main h1 {
+        grid-column: 1 / -1;
+        /* Stretch this item all the way across the grid,
+            from the first column to the last column */
+    }
+
+    figure {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+/* per instructions: "The navigation must employ a hover affect."
+*/
+@media (hover: hover) and (pointer: fine) {
+    nav a {
+        transition: all 0.25s ease;
+        border-radius: 6px;
+    }
+
+    nav a:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
+    }
+}

@@ -15,75 +15,83 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="/styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
+
+    <script src="scripts/temples.js"></script>
 
 </head>
 
 <body>
     <header>
         <h2>Temple Album</h2>
-        <nav>
+        <nav class="mobile-menu">
             <a href="">Home</a>
             <a href="">Old</a>
             <a href="">New</a>
             <a href="">Large</a>
             <a href="">Small</a>
         </nav>
+        <button class="menu-btn" class="menu-toggle">☰</button>
+        <!-- add three empty span inside button when continuing working on desapearing the hamburger -->
     </header>
 
     <main>
-        <h1>Mexico Temples</h1>
+        <h1>Arizona Temples</h1>
 
         <figure>
-            <img src="tucson.webp" alt="Tucson Temple">
-            <figcaption></figcaption>
+            <img src="images/temples/tucson.jpg" alt="Tucson Temple">
+            <figcaption>The Tucson Temple is a place of peace and power</figcaption>
         </figure>
 
         <figure>
-            <img src="mesa.webp" alt="Mesa Temple">
+            <img src="/images/temples/mesa.jpg" alt="Mesa Temple">
             <figcaption>The Mesa Arizona Temple at dusk, dedicated on October 23, 1927</figcaption>
         </figure>
 
         <figure>
-            <img src="gilbert.webp" alt="Gilbert Temple">
+            <img src="/images/temples/gilbert.jpg" alt="Gilbert Temple">
             <figcaption>An Exterior view of the Gilbert Arizona Temple, dedicated in March 2014</figcaption>
         </figure>
 
         <figure>
-            <img src="gila.webp" alt="Gila Temple">
+            <img src="/images/temples/gila.jpg" alt="Gila Temple">
             <figcaption>The Gila Valley Temple bathed in light</figcaption>
         </figure>
 
         <figure>
-            <img src="phoenix.webp" alt="Mesa Temple">
-            <figcaption>The spire of the Phoenix Arizona Temple touching the sky</figcaption>
+            <img src="/images/temples/phoenix.jpg" alt="Mesa Temple">
+            <figcaption>The spjpgof the Phoenix Arizona Temple touching the sky</figcaption>
         </figure>
 
         <figure>
-            <img src="snowflake.webp" alt="Snowflake Temple">
+            <img src="/images/temples/snowflake.jpg" alt="Snowflake Temple">
             <figcaption>Architectural details of the Snowflake Arizona Temple, a place of holiness and peace.</figcaption>
         </figure>
 
         <figure>
-            <img src="flagstaff.webp" alt="Flagstaff Temple">
-            <figcaption></figcaption>
+            <img src="/images/temples/placeholder.png" alt="Flagstaff Temple">
+            <figcaption>The Flagstaff Temple</figcaption>
         </figure>
 
         <figure>
-            <img src="queen.webp" alt="Queen Creek Temple">
-            <figcaption></figcaption>
+            <img src="/images/temples/placeholder.png" alt="Queen Creek Temple">
+            <figcaption>The Queen Creek Temple</figcaption>
         </figure>
 
         <figure>
-            <img src="yuma.webp" alt="Yuma Temple">
-            <figcaption>The Gila Valley Temple bathed in light</figcaption>
+            <img src="/images/temples/placeholder.png" alt="Yuma Temple">
+            <figcaption>The Yuma Temple</figcaption>
         </figure>
 
     </main>
 
-
     <footer>
-
+    
+        <p>&copy;<span id="currentyear"></span>  Alma Sotelo | USA </p>
+        <p><span id="lastModified"></span></p>
     </footer>
+    
 </body>
+
+</html>
