@@ -13,13 +13,12 @@ body {
     color: var(--text);
 }
 
-header {
+h1 {
     background: var(--purple);
     color: white;
     padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+   
+   
 }
 
 header h2 {
@@ -90,7 +89,7 @@ figcaption {
 footer {
     text-align: center; /* centers text inside footer */
     margin-top: .5rem;   
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: var(--font);
     background: var(--purple);
     color: white;

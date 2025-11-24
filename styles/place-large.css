@@ -1,0 +1,56 @@
+@media screen and (min-width:400px){
+    
+body {
+    background: #222;
+}
+
+main {   
+    position: relative;
+}
+
+article {    
+    position: absolute;
+    font-size: 2rem;
+    border-style: groove;
+}
+
+article h2 {
+    text-align: left;
+    background-color: #222;
+    color: whitesmoke;
+    position: relative;
+    left: -2rem;
+    padding: 1rem 1rem;
+    padding-left: 3rem;
+}
+
+.data {
+    top: 100px;
+    margin-left: 1.5rem;
+}
+
+.weather {
+    top: 450px;
+    right: 0;
+    margin-right: 1.5rem;
+}
+
+.weather h2::after {
+    content: url("/images/place/weather.svg");
+    vertical-align: middle;
+}
+
+th td {   
+    padding-top: 1rem;
+    color: black;
+}
+
+footer {   
+    font-size: 1.3rem;
+    font-weight: var(--font);
+    color: whitesmok;
+    padding: 2rem 0;    
+}    
+
+}
+

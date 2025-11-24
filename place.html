@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WDD131 Week03 Assignmet - Place - Alma Sotelo</title>
+
+    <meta name="author" content="Alma Sotelo-Rodriguez">
+    <meta name="description" content="Week 3 - Assignment - 'Place' page applying design drincipes">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+
+    <script src="scripts/place.js" defer></script>
+
+</head>
+
+<body>
+
+    <h1>Arizona</h1>
+    <main>
+        <div class="hero">
+            <source srcset="/images/place/place-large.webp" media="(min-width: 600px)">
+            <source srcset="/images/place/place-medium.webp" media="(min-width: 400px)">
+            <img src="/images/place/place-small.webp" alt="Arizona landscape" width="400" height="267">
+        </div>
+
+        <article class="data">
+            <h2>Data</h2>
+
+            <table>
+                <tr>
+                    <th>Area:</th>
+                    <td>113,998 sqmi</td>
+                </tr>
+                <t>
+                    <th>Population:</th>
+                    <td>7.5 m</td>
+                </t>
+                <tr>
+                    <th>Unemployment:</th>
+                    <td>4.1 %</td>
+                </tr>
+                <tr>
+                    <th>Minimun Wage:</th>
+                    <td>$15 hr</td>
+                </tr>
+                <tr>
+                    <th>GPD:</th>
+                    <td>$433.8 b</td>
+                </tr>
+                <tr>
+                    <th>Political:</th>
+                    <td>Swing State</td>
+                </tr>
+            </table>           
+
+        </article>
+
+        <article class="weather">
+            <h2>Weather</h2>
+            <table>
+                <tr>
+                    <th>Temperature:</th>
+                    <td id="temp">24</td>
+                </tr>
+                <t>
+                    <th>Conditions:</th>
+                    <td id="conditions">Partialy Cloudy</td>
+                </t>
+                                <tr>
+                    <th>Wind Speed:</th>
+                    <td id="speed">15 mph</td>
+                </tr>
+                <tr>
+                    <th>Wind Dhill:</th>
+                    <td id="windchill"></td>
+                </tr>
+            </table>                    
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Alma Sotelo | USA </p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+</body>

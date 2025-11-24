@@ -1,0 +1,68 @@
+:root {
+    --purple: #3c0d62;
+    --text: #222;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background: white;
+    color: var(--text);
+}
+
+h1 { 
+    text-align: center;   
+    background-color: var(--purple);
+    color: whitesmoke;
+    padding: 1.5rem;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    display: block;
+}
+
+article {
+    background: whitesmoke;
+    opacity: 75%;
+    font-size: 1rem;
+    font-weight: bolder;
+    padding: 1rem;
+    border-style: groove;
+    margin: 1rem;
+}
+
+article h2 {
+    color: #222;    
+    text-align: center;
+    padding: 0 .75rem; 
+    margin:0;  
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+th {
+    text-align: right;
+    padding-right: .5rem;
+}
+
+td {
+    text-align: left;    
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--purple);
+    font-size: .9rem;  
+    color: whitesmoke 
+}
