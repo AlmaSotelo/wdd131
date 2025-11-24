@@ -36,7 +36,7 @@ article h2 {
 }
 
 .weather h2::after {
-    content: url("/images/place/weather.svg");
+    content: url("images/place/weather.svg");
     vertical-align: middle;
 }
 
