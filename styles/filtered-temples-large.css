@@ -1,0 +1,65 @@
+@media (min-width: 700px) {
+    .menu-btn {
+        display: none;
+    }
+
+    header nav {
+        /* adds specificity */
+        max-height: none;
+        display: flex;
+        /* using Flex on the navegation nav" */
+    }
+
+    nav {
+        flex-direction: row;
+        background: none;
+        padding: 0;
+        overflow: visible;
+    }
+
+    nav a {
+        padding: 0 1rem;
+    }
+
+    .templeContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .temple-card {
+        /* not needed in movil screen*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* push image down */
+    }
+
+}
+
+@media (min-width: 900px) {
+
+    .templeContainer {
+        max-width: 1000px;
+        padding: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    main h1 {
+        grid-column: 1 / -1;
+        /* Stretch this item all the way across the grid,
+            from the first column to the last column */
+    }
+}
+
+/*hover affect*/
+@media (hover: hover) and (pointer: fine) {
+    nav a {
+        transition: background-color 0.25s ease, transform 0.25s ease;
+    }
+
+    nav a:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
+    }
+}

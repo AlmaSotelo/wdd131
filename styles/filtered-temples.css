@@ -1,0 +1,154 @@
+:root {
+    --purple: #3c0d62;
+    --text: #222;
+    --caption: #5a005a;
+    --max-width: 600px;
+    font-family: "Roboto", sans-serif;
+    --font: 600;
+}
+
+body {
+    margin: 0;
+    background: white;
+    color: var(--text);
+}
+
+h1 {
+    background: var(--purple);
+    color: white;
+    padding: 1rem;
+    opacity: 80%;
+
+}
+
+header {
+    background: var(--purple);
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.menu-btn {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+nav {
+    /*  display: none;
+    padding: 1rem;   */
+    flex-direction: column;
+    background: var(--purple);
+    /* collapsed */
+    max-height: 0;
+    overflow: hidden;
+    display: flex;
+    transition: max-height 0.4s ease;
+    /* smooth slide-down */
+}
+
+nav.open {
+    /* display: flex; */
+    max-height: 300px;
+}
+
+nav a {
+    color: white;
+    font-weight: var(--font);
+    text-decoration: none;
+    padding: .75rem 1rem;
+}
+
+main h1 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.templeContainer {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem;   
+    justify-items: center;    
+}
+
+.temple-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 400px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(63, 12, 122, 0.493);
+    text-align: center;
+}
+
+.temple-card p {
+    margin: .25rem;
+    grid-row: 1/2;   
+}
+
+.temple-card img {
+    width: 100%;
+    height: auto;   
+    margin-top: .5rem;
+    border-radius: 8px;   
+}
+
+footer {
+    text-align: center;
+    /* centers text inside footer */
+    margin-top: .5rem;
+    font-size: 1rem;
+    font-weight: var(--font);
+    background: var(--purple);
+    color: white;
+    padding: 2rem 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    nav a {
+        transition: all 0.25s ease;
+        border-radius: 6px;
+    }
+
+    nav a:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
+    }
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
