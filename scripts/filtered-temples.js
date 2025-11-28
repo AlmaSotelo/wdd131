@@ -195,13 +195,13 @@ function createTempleCard(filteredTemples) {
         let area = document.createElement("p");
         area.textContent = `${temple.area.toLocaleString()} sq ft`;
 
-        let image = document.createElement("img");       
+        let image = document.createElement("img"); 
         image.dataset.src = temple.imageUrl; // lazy load
         image.loading = "lazy";
         image.alt = `${temple.templeName} Temple`;
-
+    
         // Append to card
-        card.append(templeName, location, dedicated, area, image);        
+        card.append(templeName, location, dedicated, area, image);
 
         // Append card to container
         container.appendChild(card);
