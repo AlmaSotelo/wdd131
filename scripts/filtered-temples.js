@@ -223,3 +223,4 @@ function createTempleCard(filteredTemples) {
     lazyImages.forEach(img => observer.observe(img));
 };
 
+document.cookie = "thirdparty-cookie=12345; SameSite=None; Secure; path=/; max-age=86400";
