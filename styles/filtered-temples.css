@@ -5,6 +5,7 @@
     --max-width: 1200px;
     font-family: "Roboto", sans-serif;
     --font: 600;
+    border-width: var(--borderWidth-thin, 1px);
 }
 
 body {
