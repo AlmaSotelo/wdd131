@@ -143,25 +143,25 @@ function renderAll() {
 
 homeLink.addEventListener("click", (e) => {
     e.preventDefault();
-    container.innerHTML = ""; 
+    container.innerHTML = "";
     createTempleCard(temples);
 });
 
 oldLink.addEventListener("click", (e) => {
     e.preventDefault();
-    container.innerHTML = ""; 
+    container.innerHTML = "";
     createTempleCard(temples.filter(temple => (getYear(temple)) < 1900));
 });
 
 newLink.addEventListener("click", (e) => {
     e.preventDefault();
-    container.innerHTML = ""; 
+    container.innerHTML = "";
     createTempleCard(temples.filter(temple => (getYear(temple)) > 2000));
 });
 
 largeLink.addEventListener("click", (e) => {
     e.preventDefault();
-    container.innerHTML = ""; 
+    container.innerHTML = "";
     createTempleCard(temples.filter(temple => temple.area > 90000));
 });
 
@@ -175,13 +175,13 @@ smallLink.addEventListener("click", (e) => {
 function createTempleCard(filteredTemples) {
 
     container.innerHTML = "";
-    
-    filteredTemples.forEach(temple => {        
-        
+
+    filteredTemples.forEach(temple => {
+
         // Create card
         let card = document.createElement("section");
         card.classList.add("temple-card"); //add "temple-card" class to our created "section" element in our DOM
-        
+
         // Create elements
         let templeName = document.createElement("h3");
         templeName.textContent = temple.templeName;
@@ -195,11 +195,11 @@ function createTempleCard(filteredTemples) {
         let area = document.createElement("p");
         area.textContent = `${temple.area.toLocaleString()} sq ft`;
 
-        let image = document.createElement("img"); 
+        let image = document.createElement("img");
         image.dataset.src = temple.imageUrl; // lazy load
         image.loading = "lazy";
         image.alt = `${temple.templeName} Temple`;
-    
+
         // Append to card
         card.append(templeName, location, dedicated, area, image);
 
