@@ -1,0 +1,157 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2f3e2c;
+    background: #f7fff6;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    margin: 0.3rem;
+}
+
+.primary {
+    background: #3a7f4a;
+    color: #fff;
+}
+
+.secondary {
+    background: #b9d8b4;
+    color: #2f3e2c;
+}
+
+.outline {
+    border: 2px solid #3a7f4a;
+    color: #3a7f4a;
+    background: transparent;
+}
+
+/* Hero */
+.hero {
+    background: url('https://images.unsplash.com/photo-1524592593098-1bc9d5ba3a86?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+    text-align: center;
+    padding: 6rem 1.5rem;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* About */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 4rem 2rem;
+}
+
+.about-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.img-box {
+    background: #d5e8d4;
+    min-height: 150px;
+    border-radius: 10px;
+}
+
+/* Resources */
+.resources {
+    background: #eff8ed;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.resource-grid {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Showcase */
+.showcase {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.carousel .img-box {
+    width: 150px;
+    height: 150px;
+}
+
+/* Planner */
+.planner {
+    background: #e1f3e0;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+/* Newsletter */
+.newsletter {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.newsletter form {
+    margin-top: 1rem;
+}
+
+input[type="email"] {
+    padding: 0.75rem;
+    width: 250px;
+    border-radius: 6px;
+    border: 1px solid #98b595;
+    margin-right: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background: #3a7f4a;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+@media(max-width: 768px) {
+    .about {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

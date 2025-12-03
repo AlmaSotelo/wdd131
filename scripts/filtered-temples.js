@@ -132,6 +132,8 @@ const newLink = document.querySelector('#new');
 const largeLink = document.querySelector("#large");
 const smallLink = document.querySelector("#small");
 
+const pageHeading = document.querySelector("main h2"); /* change title on each page */
+
 function getYear(temple) {
     return parseInt(temple.dedicated.split(",")[0].trim(), 10);
 }
@@ -143,30 +145,35 @@ function renderAll() {
 
 homeLink.addEventListener("click", (e) => {
     e.preventDefault();
+    pageHeading.textContent = "All Temples";
     container.innerHTML = "";
     createTempleCard(temples);
 });
 
 oldLink.addEventListener("click", (e) => {
     e.preventDefault();
+    pageHeading.textContent = "Old Temples";
     container.innerHTML = "";
     createTempleCard(temples.filter(temple => (getYear(temple)) < 1900));
 });
 
 newLink.addEventListener("click", (e) => {
     e.preventDefault();
+    pageHeading.textContent = "New Temples";
     container.innerHTML = "";
     createTempleCard(temples.filter(temple => (getYear(temple)) > 2000));
 });
 
 largeLink.addEventListener("click", (e) => {
     e.preventDefault();
+    pageHeading.textContent = "Large Temples";
     container.innerHTML = "";
     createTempleCard(temples.filter(temple => temple.area > 90000));
 });
 
 smallLink.addEventListener("click", (e) => {
     e.preventDefault();
+    pageHeading.textContent = "Small Temples";
     container.innerHTML = "";
     createTempleCard(temples.filter(temple => temple.area < 10000));
 });
@@ -222,5 +229,7 @@ function createTempleCard(filteredTemples) {
 
     lazyImages.forEach(img => observer.observe(img));
 };
+
+
 
 document.cookie = "thirdparty-cookie=12345; SameSite=None; Secure; path=/; max-age=86400";

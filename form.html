@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>wdd131 - Product Review Form</title>
+
+    <meta name="author" content="Alma Sotelo-Rodriguez">
+    <meta name="description"
+        content="WDD-131 - Week 05 Assignment. A form using good design, giving specific field requirement, and includinga a submission confirmation with a counter. Friendly on mobile and desktop screens.">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+
+    <script src="scripts/form.js" defer></script>
+
+</head>
+
+<body>
+    <main>
+        <h1>Product Review</h1>
+        <form method="get" action="review.html" class="wf1">
+            <label>Product Name
+                <select id="product" name="product" required>
+                    <option disbled selected>Select a Product &#9662;</option>
+                </select>
+            </label>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Alma Sotelo | USA </p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+</body>

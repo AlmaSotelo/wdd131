@@ -21,28 +21,19 @@
         padding: 0 1rem;
     }
 
-    .templeContainer {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .temple-card {
-        /* not needed in movil screen*/
-        display: flex;
+    /*.temple-card {        
+        display: flex; 
         flex-direction: column;
-        justify-content: space-between;
-        /* push image down */
-    }
+        justify-content: space-between; 
+    }*/
 
 }
 
 @media (min-width: 900px) {
 
-    .templeContainer {
-        max-width: 1000px;
-        padding: 2rem;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
+   .templeContainer {
+        max-width: 1200px;       
+    }  
 
     main h1 {
         grid-column: 1 / -1;

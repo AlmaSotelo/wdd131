@@ -2,7 +2,6 @@
     --purple: #3c0d62;
     --text: #222;
     --caption: #5a005a;
-    --max-width: 1200px;
     font-family: "Roboto", sans-serif;
     --font: 600;
     border-width: var(--borderWidth-thin, 1px);
@@ -14,7 +13,7 @@ body {
     color: var(--text);
 }
 
-h1 {
+h2 {
     background: var(--purple);
     color: white;
     padding: 1rem;
@@ -31,7 +30,7 @@ header {
     align-items: center;
 }
 
-header h2 {
+header h1 {
     margin: 0;
     font-size: 1.5rem;
 }
@@ -69,7 +68,7 @@ nav a {
     padding: .75rem 1rem;
 }
 
-main h1 {
+main h2 {
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -78,36 +77,41 @@ main h1 {
 .templeContainer {
     display: grid;
     gap: 1.5rem;
+    /* I leave it because it is needed when in mobil view*/
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    width: 100%;
-    max-width: var(--max-width);
+    /*width: 100%;*/
+    /*max-width: var(--max-width); I moved to large screen*/
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0 0 2rem 0;
+    /* I leave it just to avoid the last 
+                           cards going beyond the footer in mobil and small view*/
     justify-items: center;
-    align-items: start;
+    /* I need it to get cards centered in movil view */
+    /*align-items: start; */
 }
 
 .temple-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /*gap: 0.6rem;*/
+    /*ext-align: center;*/
     border: 1px solid #ddd;
     border-radius: 12px;
     padding: 1.25rem;
     margin: 1rem;
     width: 100%;
-    height: 100%;
+    /* I need it to get all cards the same width in mobil view*/
+    /*height: 100%;*/
     max-width: 300px;
+    /* it is needed it to avoid getting the card too wide due width:100%*/
     box-sizing: border-box;
     background: #eceaec;
     box-shadow: 0 2px 10px rgba(63, 12, 122, 0.493);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.6rem;
-    text-align: center;
 }
 
-.temple-card h2 {
+.temple-card h1 {
     margin: 0;
     font-size: 2rem;
     font-weight: 700;
@@ -118,8 +122,8 @@ main h1 {
 .temple-card p {
     margin: 0;
     line-height: 1.45;
-    grid-row: 1/2;
-    text-align: center;
+    /*grid-row: 1/2;*/
+    text-align: center; /* I left this because I don't want the text goes to the left when go to the next row*/
 }
 
 .temple-card img {
