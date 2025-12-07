@@ -1,0 +1,97 @@
+body {
+    font-family: "Geist";
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    padding: 1rem;
+    background-color: #0D3F13;
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+.wf1 {
+    background-color:#E0ECC5 ;
+    margin: .5rem 0 0 0;
+    padding: 1rem;
+    border-radius: 4px;
+    line-height: 20px;    
+}
+
+#productSelect, #date {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: .25rem;
+    border: none;
+}
+
+input[type="date"], textarea { 
+    width:100%;
+    box-sizing: border-box;
+    border: none;
+}
+
+.star-rating, .installation , .featuresQuestion {
+    margin-top: 25px;
+}
+
+.ratings {
+    display: flex;
+    justify-content: space-between;    
+}
+
+.ratings label {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;    
+    text-align: center;
+    max-width: 100px;    
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.features {
+    display: flex; 
+    align-items: center;    
+}
+
+#lastFeature {
+   margin-bottom: 20px;
+}
+
+label span {
+    color: #133176;
+    text-decoration: underline;
+    text-decoration-color: #133176;
+}
+
+textarea {
+    resize: none;
+    margin-bottom: 20px;
+    font-size: 20px;
+} 
+
+.wf1 input[type="submit"] {   
+    padding: .8rem;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    /* centers text inside footer */
+    margin-top: .5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color:#0D3F13 ;
+    color: white;
+    padding: 1rem 0;
+}
