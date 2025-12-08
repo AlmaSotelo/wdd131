@@ -1,27 +1,4 @@
-
-button.addEventListener('click', function () {
-    if (input.value.trim() !== '') {
-        const input = document.querySelector('#favchap');
-        const button = document.querySelectorSelector('button');
-        const list = document.querySelector('#list'); // Selects the first <ul> element found in the document
-        const entryList = document.createElement('el'); // Creates a new <li> element and stores it in the variable named entryList.
-        const deleteButton = document.createElement('button');
-        entryList.textContent = input.value;
-        deleteButton.textContent = '❌';
-        entryList.append(deleteButton);
-        list.append(entryList);
-    }
-
-    deleteButton.addEventListener('click', function () {
-        list.removeChild(el);
-        input.focus();
-    });
-
-    input.value = '';
-
-    input.focus();
-
-});
+// defered //
 
 const input = document.querySelector('#favchap');
 const button = document.querySelector('button');
@@ -56,7 +33,7 @@ function displayList(item) {
         deleteChapter(li.textContent); // note this new function that is needed to remove the chapter from the array and localStorage.
         input.focus(); // set the focus back to the input
     });
-    console.log('I like to copy code instead of typing it out myself and trying to understand it.');
+    //console.log('I like to copy code instead of typing it out myself and trying to understand it.');//
 }
 
 function setChapterList() {
@@ -67,12 +44,10 @@ function getChapterList() {
     return JSON.parse(localStorage.getItem('myFavBOMList'));
 }
 
-chapter = chapter.slice(0, chapter.length - 1); // this slices off the last character
 
-chaptersArray = chaptersArray.filter((item) => item !== chapter);
 
 function deleteChapter(chapter) {
-    chapter = chapter.slice(0, chapter.length - 1);
-    chaptersArray = chaptersArray.filter(item => item !== chapter);
-    setChapterList();
+    chapter = chapter.slice(0, chapter.length - 1); // remove the "X"
+    chaptersArray = chaptersArray.filter(item => item !== chapter); // keep everything except the one we are deleting
+    setChapterList(); // update local storage
 }

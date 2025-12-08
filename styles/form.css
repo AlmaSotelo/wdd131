@@ -1,7 +1,12 @@
-body {
+body {    
     font-family: "Geist";
     max-width: 500px;
+    height: 100%;
     margin: 0 auto;
+}
+
+main {
+    flex-grow: 1;
 }
 
 h1 {
@@ -29,7 +34,7 @@ h1 {
     border: none;
 }
 
-input[type="date"], textarea { 
+input[type="date"], textarea, .name { 
     width:100%;
     box-sizing: border-box;
     border: none;
@@ -78,6 +83,18 @@ textarea {
     font-size: 20px;
 } 
 
+.name {
+    display: block;
+    align-items: center;
+}
+
+#name {
+    display: block;
+    width: 98.5%;
+    margin-bottom: 20px;
+    line-height: 20px;;
+}
+
 .wf1 input[type="submit"] {   
     padding: .8rem;
     width: 100%;
@@ -95,3 +112,13 @@ footer {
     color: white;
     padding: 1rem 0;
 }
+
+@media screen and (max-width: 300px) {
+    /* @media could be used more efficiently but I just included this to see the code works */
+    .wf1 {
+      background-color: #f09ddb      
+    }    
+}
+
+
+    

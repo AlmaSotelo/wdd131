@@ -8,8 +8,7 @@
     <title>wdd131 - Product Review Form</title>
 
     <meta name="author" content="Alma Sotelo-Rodriguez">
-    <meta name="description"
-        content="WDD-131 - Week 05 Assignment. A form using good design, giving specific field requirement, and includinga a submission confirmation with a counter. Friendly on mobile and desktop screens.">
+    <meta name="description" content="WDD-131 - Week 05 Assignment. A form using good design">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,15 +19,20 @@
     <link rel="stylesheet" href="styles/form-large.css">
 
     <script src="scripts/form.js" defer></script>
+    <script src="scripts/footerInfo.js" defer></script>
 
 </head>
 
 <body>
-    <main>
-        <h1>Product Review</h1>
+    
+        <header>
+            <h1>Product Review</h1>
+        </header>
+
+    <main>    
         <form method="get" action="review.html" class="wf1">
 
-            <label>Product Name
+            <label for="productSelect">Product Name
                 <select id="productSelect" name="product" required>
                     <option value="" disabled selected>Select a Product...</option>
                 </select>
@@ -62,7 +66,7 @@
                 </div>
             </div>
 
-            <label for="date" class="installation">Date of Installation            
+            <label for="date" class="installation">Date of Installation
                 <input type="date" id="date" name="intallationDate" required>
             </label>
 
@@ -71,19 +75,25 @@
             </div>
             <label for="feature-D" class="features"><input type="checkbox" id="feature-D" name="durability"
                     value="yes">Durability</label>
-            <label for="feature-E" class="features"><input type="checkbox" id="feature-E" name="easyUse" value="yes">Easy of
+            <label for="feature-E" class="features"><input type="checkbox" id="feature-E" name="easyUse"
+                    value="yes">Easy of
                 Use</label>
             <label for="feature-P" class="features"><input type="checkbox" id="feature-P" name="performance"
                     value="yes">Performance</label>
-            <label for="feature-Di" class="features" id="lastFeature"><input type="checkbox" id="feature-Di" name="disign"
-                    value="yes">Design</label>
+            <label for="feature-Di" class="features" id="lastFeature"><input type="checkbox" id="feature-Di"
+                    name="disign" value="yes">Design</label>
 
             <label for="message" class="message">Written Review <span>(Optional)</span></label>
             <textarea id="message" name="review" rows="5"></textarea>
 
-            <label for="yourName" class="name">Your Name <span>(Optional)</span></label>
-            <textarea id="yourName" name="yourName" rows="1"></textarea>
-
+            <label for="name" class="name">Your Name <span>(Optional)</span>
+                <input type="text" id="name" name="yourName">   
+            </label>
+            <script> // to avoid the counter increaseing when review is refresh
+                document.querySelector("form").addEventListener("submit", () => {
+                    localStorage.setItem("submitted", "true");
+                });
+            </script>
             <input type="submit" value="Post Review">
 
 
@@ -96,3 +106,5 @@
         <p><span id="lastModified"></span></p>
     </footer>
 </body>
+
+</html>
