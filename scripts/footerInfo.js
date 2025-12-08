@@ -1,4 +1,4 @@
-// footerInfo.js (deferred)
+// footerinfo.js (deferred)
 (function () {
     "use strict";
 
