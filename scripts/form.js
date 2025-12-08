@@ -28,6 +28,11 @@ const products = [
     }
 ];
 
+// to avoid the counter increaseing when review.html is refresh
+document.querySelector("form").addEventListener("submit", () => {
+    localStorage.setItem("submitted", "true");
+});
+
 // function to populate options dropdown
 function bringProducts(products) {
     const productSelect = document.getElementById("productSelect");

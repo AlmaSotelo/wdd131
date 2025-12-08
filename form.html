@@ -89,11 +89,7 @@
             <label for="name" class="name">Your Name <span>(Optional)</span>
                 <input type="text" id="name" name="yourName">   
             </label>
-            <script> // to avoid the counter increaseing when review is refresh
-                document.querySelector("form").addEventListener("submit", () => {
-                    localStorage.setItem("submitted", "true");
-                });
-            </script>
+            
             <input type="submit" value="Post Review">
 
 
