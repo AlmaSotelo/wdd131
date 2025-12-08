@@ -1,7 +1,7 @@
 // footerinfo.js (deferred)
+
 (function () {
     "use strict";
-
     // current year
     var yearEl = document.getElementById("currentyear");
     if (yearEl) {
