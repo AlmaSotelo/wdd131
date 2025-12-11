@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Siteplan | Planttitas</title>
+    <link rel="icon" type="image/webp" href="/project/images/favicon.png">
+
+    <meta name="author" content="Alma Sotelo-Rodriguez">
+    <meta name="description"
+        content="WDD-131 - Week 05 Assignment.  Website Planning Document - Plan for a small information site about local community gardens.">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Nunito:wght@300;400;600&display=swap">
+
+    <link rel="stylesheet" href="styles/gardening.css">
+    <link rel="stylesheet" href="styles/gardening-large.css">
+
+    <script src="scripts/gardening.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="gardening.html"> <!-- for an intuitive way to return the homepage-->
+            <img class="logo" src="images/logogr2.webp" alt="Planttitas logo">
+            <span id="logo">planttitas.net</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="gardening.html">Home</a></li>
+                <li><a href="#about" id="boutLink">About</a></li> <!-- bring it dynamiclly-->
+                <li><a href="#my-garden">My Garden</a></li>
+                <li><a href="#" id="resourcesLink">Resources</a></li> <!-- bring it dynamiclly-->
+                <li><a>Seeds Exchange</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- different <h1> within different <section> for best practice -->
+        <div class="hero">
+            <img src="images/hero-garden.webp" alt="hero-garden">
+        </div>
+        <section id="about"> <!-- initially hidden -->
+            <h1>Who we are</h1>
+            <p>Planttitas is a growing community of <span id="subscribers"> numOfSubscribers </span> gardeners. <br><br>
+                Here, we learn together, share what we discover, and celebrate every little sprout and success. <br>
+
+                At Planttita, we believe that gardening is more than planting seeds, it's planting <strong>health, joy,
+                    and connection.</strong> That's
+                why our mission goes beyond a simple harvest. We're committed to:<br>
+
+                - Growing nutritious, chemical-free food<br>
+
+                - Choosing a healthier lifestyle through mindful eating <br>
+
+                - Improving our mental well-being by connecting with nature<br>
+
+                - Encouraging sustainable habits in everyday life<br>
+
+                Whether you're starting your first basil plant or planning a full veggie garden, you're invited to grow
+                with us. We keep
+                things simple, supportive, and fun; because everyone can be a Planttita. <br>
+
+                Welcome to the garden. Let's grow, learn, and thrive together.<br>
+            </p>
+            <!-- a link with a button appearance targeting a Form to join us -->
+            <a href="join-us.html" class="button">Join Us</a>
+
+        </section>
+
+        <section id="content"></section>
+
+    </main>
+
+    <footer>
+        <p id="copy-right">Copyright &copy; <span id="year"></span> Alma Sotelo</p>
+    </footer>
+
+</body>
+
+</html>

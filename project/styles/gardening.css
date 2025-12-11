@@ -1,29 +1,108 @@
-h1 { /* used here just to see how would look in header/footer */
-    background-color: #386641; 
+:root {
+    --hf-background-color: rgb(23, 96, 52);
+    --hf-text-color: rgb(255 248 231);
+}
+header {
+    background-color: var(--hf-background-color);
+    display: flex;      
+    align-items: center;
+    
+}
+
+nav {
+    display: flex;
+    flex-direction: column;   
+
+}
+
+header a, nav a {
+    display:flex;
+    flex-direction: column;  
+    text-decoration: none;
+    cursor: pointer;   
+    color: var(--hf-text-color);
+    padding: .25rem;
+    margin-left: 1rem;
+}
+
+.hero img {
+    width: 100%;
+}
+
+h1 {
+    /* used here just to see how would look in header/footer */
+    background-color: #386641;
     color: #F2E8CF;
     text-align: center;
     font-family: 'Quicksand';
 }
 
-#name {
-    text-decoration: underline;
-    text-decoration-color: #BC4749;
+li {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
 }
 
-h2 {   
+
+
+h2 {
     background-color: #A7C957;
-    color:#0f3015;
+    color: #0f3015;
 }
 
-body,
-p,
-a,
-button {
+body {
     font-family: 'Nunito', sans-serif;
-    color:#0f3015 ;
+    color: #0f3015;
     background-color: #f8f7f6;
 }
 
 img {
-    width:100px;
+    width:150px;
+    
+}
+
+footer{
+    background-color: var(--hf-background-color);
+    color: var(--hf-text-color);
+    text-align: center;
+}
+
+footer p {
+    padding: 2rem 2rem;
+}
+
+
+#content {
+    white-space: pre-line;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    border: none;
+}
+
+.button {
+    /* make it look like a button */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #eb7021 ;
+    color: white;
+    text-decoration: none;   
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #d63d20;
+}
+
+/* CSS to hide the section initially */
+#about {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
 }

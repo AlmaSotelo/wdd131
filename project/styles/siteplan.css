@@ -1,0 +1,38 @@
+h1 {
+    /* used here just to see how would look in header/footer */
+    background-color: #386641;
+    color: #F2E8CF;
+    text-align: center;
+    font-family: 'Quicksand';
+}
+
+#name {
+    text-decoration: underline;
+    text-decoration-color: #BC4749;
+}
+
+h2 {
+    background-color: #A7C957;
+    color: #0f3015;
+}
+
+body,
+p,
+a {
+    font-family: 'Nunito', sans-serif;
+    color: #0f3015;
+    background-color: #f8f7f6;
+}
+
+.siteplanLogo {
+    width: 100px;
+}
+
+img {
+    width: 100px;
+}
+
+
+
+
+

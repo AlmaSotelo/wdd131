@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     menuBtn.addEventListener('click', () => {
         nav.classList.toggle('open');
 
-
         /* transform hamburger into X and back to hamburguer */
         if (nav.classList.contains('open')) {
             menuBtn.textContent = "✖";
