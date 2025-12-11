@@ -1,1 +1,8 @@
-/* to be completed 
+@media screen and (min-width: 500px) {
+header nav {   
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+}
