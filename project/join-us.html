@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Siteplan | Planttitas</title>
+    <link rel="icon" type="image/webp" href="/project/images/favicon.png">
+
+    <meta name="author" content="Alma Sotelo-Rodriguez">
+    <meta name="description" content="WDD-131 - Week 06 Assignment.  The Form of the Project Planttitas.net">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Nunito:wght@300;400;600&display=swap">
+
+    <link rel="stylesheet" href="styles/gardening.css">
+    <link rel="stylesheet" href="styles/gardening-large.css">
+
+    <script src="scripts/gardening.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="gardening.html"> <!-- for an intuitive way to return to the homepage-->
+            <img class="logo" src="images/logogr2.webp" alt="Planttitas logo" loading="lazy">
+            <span id="logo">planttitas.net</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="gardening.html">Home</a></li>
+                <li><a href="#about" id="boutLink">About</a></li> <!-- bring it dynamiclly-->
+                <li><a href="#my-garden">My Garden</a></li>
+                <li><a href="#" id="resourcesLink">Resources</a></li> <!-- bring it dynamiclly-->
+                <li><a>Seeds Exchange</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form id="formSection" autocomplete="on">
+            <fieldset>
+                <label for="name" class="name">Your Name
+                    <input type="text" id="name" name="yourName" required autocomplete="on">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <label for="email" class="suscriberEmail">Your email
+                    <input type="email" id="email" name="youremail" required autocomplete="on">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <label for="message">Please leave us a message</label>
+                <textarea id="message" name="message" rows="5" autocomplete="off"></textarea>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <p id="copy-right">Copyright &copy; <span id="year"></span> Alma Sotelo</p>
+        <a href="siteplan-and-resources.html"> siteplan & Resources</a>
+    </footer>
+
+</body>
+
+</html>

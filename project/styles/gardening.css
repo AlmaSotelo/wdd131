@@ -5,14 +5,12 @@
 header {
     background-color: var(--hf-background-color);
     display: flex;      
-    align-items: center;
-    
+    align-items: center;    
 }
 
 nav {
     display: flex;
-    flex-direction: column;   
-
+    flex-direction: column;  
 }
 
 header a, nav a {
@@ -43,8 +41,6 @@ li {
     margin: 0;
 }
 
-
-
 h2 {
     background-color: #A7C957;
     color: #0f3015;
@@ -68,9 +64,13 @@ footer{
 }
 
 footer p {
-    padding: 2rem 2rem;
+    padding-top: 1rem;
 }
 
+footer a {
+   text-decoration:none;
+   color: var(--hf-text-color);
+}
 
 #content {
     white-space: pre-line;
@@ -106,3 +106,4 @@ footer p {
     border: 1px solid #ccc;
     margin-top: 10px;
 }
+

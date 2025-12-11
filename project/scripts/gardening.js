@@ -69,9 +69,11 @@ aboutLink.addEventListener("click", function (e) {
 });
 
 //Prevent hiding when clicking inside its content
-aboutSection.addEventListener("click", function (e) {
-    e.stopPropagation();
-});
+if (aboutSection) {
+    aboutSection.addEventListener("click", function (e) {
+        e.stopPropagation();
+    });
+}
 
 // - - - - - -    Resources  - - - - -
 //           show Resources, hide About
@@ -87,15 +89,17 @@ resourcesLink.addEventListener("click", function (e) {
     fetch("resources.txt")
         .then(response => response.text())
         .then(data => {
-            contentSection.innerHTML = data;
-            contentSection.style.display = "block";            
-        });    
+            contentSection.innerHTML = "<h1>Resources for your Succes</h1>" + data;
+            contentSection.style.display = "block";
+        });
 });
 
 //Prevent hiding when clicking inside its content
-contentSection.addEventListener("click", function (e) {
-    e.stopPropagation();
-});
+if (aboutSection) {
+    contentSection.addEventListener("click", function (e) {
+        e.stopPropagation();
+    });
+}
 
 // - - - - - - - - - - - - - - - - - - - -
 
@@ -105,6 +109,15 @@ document.addEventListener("click", function () {
     contentSection.style.display = "none";
 });
 
+// --------------------   Form --------------
+
+const formSection = document.getElementById("formSection");
+
+if (formSection) {
+    formSection.addEventListener("click", function (e) {
+        e.stopPropagation();
+    });
+}
 
 
 
