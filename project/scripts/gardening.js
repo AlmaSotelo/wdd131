@@ -41,82 +41,82 @@ const seeds = [
     }
 ];
 
-// get elements
-//using.querySelector     
+
+// - - - - - - - - -    About   - - - - - - - - -
+//               Show About, hide Resources
+//prepare*/
+
+// ---------------------------- Get elements ----------------------------
 const aboutSection = document.querySelector('#about');
 const aboutLink = document.querySelector('#boutLink');
-//using.getElementById
+
 const contentSection = document.getElementById('content');
 const resourcesLink = document.getElementById('resourcesLink');
 
-// - - - - - - - - -    About   - - - - - - - - -      
-//               Show About, hide Resources    
-//prepare
-aboutLink.addEventListener("click", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    // Hide the resources section first
-    contentSection.style.display = 'none'
-
-    // Check the current display style and switch it
-    if (aboutSection.style.display === 'none' || aboutSection.style.display === '') {
-        // Show the section
-        aboutSection.style.display = 'block';
-    } else {
-        aboutSection.style.display = 'none';
-    }
-});
-
-//Prevent hiding when clicking inside its content
-if (aboutSection) {
-    aboutSection.addEventListener("click", function (e) {
-        e.stopPropagation();
-    });
-}
-
-// - - - - - -    Resources  - - - - -
-//           show Resources, hide About
-//prepare
-resourcesLink.addEventListener("click", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    //hide other sections first
-    aboutSection.style.display = "none";
-
-    //load and show when clicked
-    fetch("resources.txt")
-        .then(response => response.text())
-        .then(data => {
-            contentSection.innerHTML = "<h1>Resources for your Succes</h1>" + data;
-            contentSection.style.display = "block";
-        });
-});
-
-//Prevent hiding when clicking inside its content
-if (aboutSection) {
-    contentSection.addEventListener("click", function (e) {
-        e.stopPropagation();
-    });
-}
-
-// - - - - - - - - - - - - - - - - - - - -
-
-//hide about and resources when clicking outside
-document.addEventListener("click", function () {
-    aboutSection.style.display = "none";
-    contentSection.style.display = "none";
-});
-
-// --------------------   Form --------------
-
+const subCountEl = document.getElementById("subscribers");
 const formSection = document.getElementById("formSection");
 
-if (formSection) {
-    formSection.addEventListener("click", function (e) {
+
+// -------------------------- ABOUT SECTION ------------------------------
+if (aboutLink && aboutSection) {
+
+    aboutLink.addEventListener("click", function (e) {
+        e.preventDefault();
         e.stopPropagation();
+
+        if (contentSection) contentSection.style.display = "none";
+
+        aboutSection.style.display =
+            (aboutSection.style.display === "block") ? "none" : "block";
     });
+
+    aboutSection.addEventListener("click", e => e.stopPropagation());
+}
+
+
+// -------------------------- RESOURCES SECTION --------------------------
+if (resourcesLink && contentSection) {
+
+    resourcesLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (aboutSection) aboutSection.style.display = "none";
+
+        fetch("resources.txt")
+            .then(response => response.text())
+            .then(data => {
+                contentSection.innerHTML =
+                    "<h1>Resources for your Success</h1>" + data;
+                contentSection.style.display = "block";
+            });
+    });
+
+    contentSection.addEventListener("click", e => e.stopPropagation());
+}
+
+
+// --------------------------- CLICK OUTSIDE ------------------------------
+document.addEventListener("click", function () {
+    if (aboutSection) aboutSection.style.display = "none";
+    if (contentSection) contentSection.style.display = "none";
+});
+
+
+// ------------------------------ FORM -----------------------------------
+let subCounter = 0;
+
+if (formSection && subCountEl) {
+
+    formSection.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        subCounter += 1;
+        subCountEl.textContent = subCounter;
+
+        formSection.reset();
+    });
+    
 }
 
 
